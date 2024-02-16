@@ -45,20 +45,20 @@ function SayMyNAME(name){
     console.log(name)
 }
 
-SayMyNAME('Andrew')
+//SayMyNAME('Andrew')
 
 function greetings(name){
     greet=`Hi ${name} Nice to meet you !!`
     console.log(greet)
 }
 
-greetings('Anna')
+//greetings('Anna')
 
 function sum(a ,b){
     return a+b
 }
 
-console.log(sum(12,4))
+//console.log(sum(12,4))
 
 //BABY TIP CALCULATOR
 //old declaration of function
@@ -70,10 +70,20 @@ function CalculateFoodTotal(food, tip){
     return total
 }
 
-console.log(CalculateFoodTotal(100,20))
+//console.log(CalculateFoodTotal(100,20))
 
 //ARROW FUNCTIONS
-
+//arrow function with explicity return 
 const SumArrow = (a, b) =>{
     return a + b
 }
+//arrow function with implicity return
+
+const sum1 =(a, b) => a+b
+
+//ARRAYS
+
+const groceries =['banana','tomato','orange','avocado']
+
+console.log(groceries)
+console.log(groceries[0])
