@@ -85,5 +85,12 @@ const sum1 =(a, b) => a+b
 
 const groceries =['banana','tomato','orange','avocado']
 
-console.log(groceries)
-console.log(groceries[0])
+groceries.push("Pomme") //ajouter un element a la fin du tableau
+//console.log(groceries)
+
+//console.log(groceries.slice(1,3)) //ttrier  les elements se trouvant a l'indice donnee
+//console.log(groceries.slice(3,5))
+//array methods : slice, push, indexOf, length
+//console.log(groceries.indexOf('Pomme')) //get the index of eleement in array
+
+console.log(groceries.length)
