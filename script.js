@@ -189,5 +189,20 @@ const SumArrays =(numbers) =>{
     return { result }
 }
 
-nums = [1,2,3,4,5]
-console.log(SumArrays(nums))
+//nums = [1,2,3,4,5]
+// console.log(SumArrays(nums))
+
+const findMax= (numbers) => {
+    let result = numbers[0]
+    for(const number of numbers){
+        if(number > result){
+            result=number
+        }
+    }
+    
+    
+    return { result }
+
+}
+
+console.log(findMax([1,2,3,4,5,6,4,9,10,21,3,2]))
