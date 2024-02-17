@@ -248,6 +248,27 @@ const wordFrequency =(phrase) =>{
     return letterFrequency(words)
 }
 
-const userInput=prompt("Entrez une phrase pour voir la frequence des mots !!")
+// const userInput=prompt("Entrez une phrase pour voir la frequence des mots !!")
 
-console.log(wordFrequency(userInput))
+// console.log(wordFrequency(userInput))
+
+//HIGHER ORDER FUNCTIONS
+//map : loops and return array
+//filter : loops and return array with matching conditions
+//reduce
+
+// let result=[1,2,3,4,5,6,7].map(rs => console.log(rs))
+//MAP
+const doubleMap =(numbers) =>{
+    return numbers.map(number => number * 2)
+}
+//console.log(doubleMap([1,2,3,4]))
+//FILTER
+
+const filterNumber =(numbers, greaterNumber) =>{
+    return numbers.filter( number => number > greaterNumber)
+}
+
+console.log(filterNumber([1,2,3,4,5,6],3))
+
+
