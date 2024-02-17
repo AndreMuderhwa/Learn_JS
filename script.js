@@ -150,8 +150,44 @@ const fruits =['banana','tomato','orange','avocado','apple']
 //     console.log(fruit)
 // } use every time this
 
-const number=[1,2,3,4,5,6]
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-for(const num of number){
-    console.log(num)
+const numbers=[1,2,3,4,5,6]
+
+const double =(numbers) =>{
+    let result =[]
+    for(const number of numbers){
+        result.push(number * 2)
+
+    }
+    return result
 }
+
+// for(const num of number){
+//     //console.log(num)
+//     result.push(num * 2)
+// }
+ 
+//console.log(double([2,4,6,8,10,12]))
+
+const HowManyLetters=(phrase)=>{
+
+    // let result =0;
+    // for(const index in phrase){
+    //     console.log(Number(index)+1)
+    //     result = Number(index) + 1
+    // }
+    return { result : phrase.length }
+}
+
+// const phrase=prompt("Ecrit ta phrase")
+// console.log(HowManyLetters(phrase))
+
+const SumArrays =(numbers) =>{
+    let result=0;
+    for (const number of numbers){
+        result = result + number
+    }
+    return { result }
+}
+
+nums = [1,2,3,4,5]
+console.log(SumArrays(nums))
