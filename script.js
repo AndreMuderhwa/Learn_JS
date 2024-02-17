@@ -137,4 +137,21 @@ const introducer=(name, shirt) =>{
    return intro
 }
  
-console.log(introducer('Andrew','yellow'))
+// console.log(introducer('Andrew','yellow'))
+
+//LOOPS
+const fruits =['banana','tomato','orange','avocado','apple']
+
+// for(let i=0; i< fruits.length; i++){
+//     console.log(fruits[i])
+// } never use this loop
+
+// for (const fruit of fruits){
+//     console.log(fruit)
+// } use every time this
+
+const number=[1,2,3,4,5,6]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+for(const num of number){
+    console.log(num)
+}
