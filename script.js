@@ -1,5 +1,5 @@
 // console.log("Hello World")
-//let name="Andrew Muderhwa"
+//let name="Andrew Muderhwa" const =ce qui ne change pas let=ce qui va changer
 //const name, var name
 // age=24
 //comment
@@ -191,7 +191,7 @@ const SumArrays =(numbers) =>{
 
 //nums = [1,2,3,4,5]
 // console.log(SumArrays(nums))
-
+//find max number in array
 const findMax= (numbers) => {
     let result = numbers[0]
     for(const number of numbers){
@@ -205,4 +205,42 @@ const findMax= (numbers) => {
 
 }
 
-console.log(findMax([1,2,3,4,5,6,4,9,10,21,3,2]))
+// console.log(findMax([1,2,3,4,5,6,4,9,10,21,3,2]))
+
+//letter frequency
+
+const letterFrequency =(phrase) =>{
+    // let new_phrase=phrase.toLowerCase();
+    let frequency={}
+    for(const letter of phrase){
+        if(letter in frequency){
+            frequency[letter] += 1
+        }
+        else{
+            frequency[letter] = 1
+        }
+    } 
+    return frequency
+}
+
+// console.log(letterFrequency('haha'))
+
+  
+
+// word frequency
+
+const wordFrequency =(phrase) =>{
+    let frequency={}
+    words=phrase.split(' ')
+    for(const word of words){
+        if(word in frequency){
+            frequency[word] += 1
+        }
+        else{
+            frequency[word] = 1
+        }
+    }
+    return frequency
+}
+
+console.log(wordFrequency("hello my friend hello friend my my"))
