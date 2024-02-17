@@ -93,4 +93,30 @@ groceries.push("Pomme") //ajouter un element a la fin du tableau
 //array methods : slice, push, indexOf, length
 //console.log(groceries.indexOf('Pomme')) //get the index of eleement in array
 
-console.log(groceries.length)
+//console.log(groceries.length)
+
+//OBJECTS
+
+const person={
+    name:'Leonardo',
+    shirt:'white'
+}
+
+//access object : dot notation and bracket notation
+console.log(person.name)
+console.log(person.shirt) 
+
+//bracket notation
+console.log(person['name'])
+console.log(person['shirt'])
+
+person.phone="+243 991 900 843"
+person['adress']='Q Katoy, av Bikukwe'
+
+console.log(person.phone)
+console.log(person.adress)
+
+const person2={
+    name:'Qazi',
+    shirt:'black'
+} 
