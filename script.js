@@ -229,18 +229,25 @@ const letterFrequency =(phrase) =>{
 
 // word frequency
 
+// const wordFrequency =(phrase) =>{
+//     let frequency={}
+//     words=phrase.split(' ')
+//     for(const word of words){
+//         if(word in frequency){
+//             frequency[word] += 1
+//         }
+//         else{
+//             frequency[word] = 1
+//         }
+//     }
+//     return frequency
+// }
+//other way to code word frequency
 const wordFrequency =(phrase) =>{
-    let frequency={}
-    words=phrase.split(' ')
-    for(const word of words){
-        if(word in frequency){
-            frequency[word] += 1
-        }
-        else{
-            frequency[word] = 1
-        }
-    }
-    return frequency
+    const words=phrase.split(' ')
+    return letterFrequency(words)
 }
 
-console.log(wordFrequency("hello my friend hello friend my my"))
+const userInput=prompt("Entrez une phrase pour voir la frequence des mots !!")
+
+console.log(wordFrequency(userInput))
