@@ -103,20 +103,38 @@ const person={
 }
 
 //access object : dot notation and bracket notation
-console.log(person.name)
-console.log(person.shirt) 
+// console.log(person.name)
+// console.log(person.shirt) 
 
 //bracket notation
-console.log(person['name'])
-console.log(person['shirt'])
+// console.log(person['name'])
+// console.log(person['shirt'])
 
 person.phone="+243 991 900 843"
 person['adress']='Q Katoy, av Bikukwe'
 
-console.log(person.phone)
-console.log(person.adress)
+// console.log(person.phone)
+// console.log(person.adress)
 
 const person2={
     name:'Qazi',
     shirt:'black'
 } 
+// console.log(person2)
+
+const introducer=(name, shirt) =>{
+    const person={
+        name: name,
+        shirt: shirt,
+        assets: 100000,
+        liabilities:23000,
+        networth: function (){
+            return this.assets - this.liabilities
+        }
+    }
+   const intro= `Hello my name is ${person.name} and the color of my shirt is ${person.shirt}
+   and my net worth is $ ${person.networth()} USD `
+   return intro
+}
+ 
+console.log(introducer('Andrew','yellow'))
