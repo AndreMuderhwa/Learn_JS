@@ -269,9 +269,28 @@ const filterNumber =(numbers, greaterNumber) =>{
     return numbers.filter( number => number > greaterNumber)
 }
 
+const actors=[
+    {name:'johnny', networth:200000},
+    {name:'amber',networth:10},
+    {name:'Matt',networth:170000},
+    {name:'justin',networth:120000},
+    {name:'Andrew',networth:100000},
+    {name:'Ciento',networth:100000},
+    {name:'Glam',networth:150000},
+    {name:'Julia',networth:240000},
+    {name:'leonardo', networth:100000}
+]
 // console.log(filterNumber([1,2,3,4,5,6],3))
 
-const nums=[1,2,3,4,5,6]
-console.log(nums.filter(num => num > 4 && num < 2))
+// const nums=[1,2,3,4,5,6]
+// console.log(nums.filter(num => num > 4 && num < 2))
+
+// console.log(actors.filter(actor => actor.networth > 10))
+
+// let result =actors.filter(actor => actor.networth > 10)
+// let names=result.map( rs => rs.name).join(', ')
+//playground.innerHTML=`<h1>${result[0].name}</h1>` pour l'enseignant
+// document.getElementById('conteneur').innerHTML=`<h1>${names}</h1>`  // pour l'etudiant
+
 
 
