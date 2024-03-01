@@ -269,6 +269,9 @@ const filterNumber =(numbers, greaterNumber) =>{
     return numbers.filter( number => number > greaterNumber)
 }
 
-console.log(filterNumber([1,2,3,4,5,6],3))
+// console.log(filterNumber([1,2,3,4,5,6],3))
+
+const nums=[1,2,3,4,5,6]
+console.log(nums.filter(num => num > 4 && num < 2))
 
 
