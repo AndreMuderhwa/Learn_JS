@@ -307,7 +307,7 @@ const total=actors.reduce((prev, curr) => prev + curr.networth,0)   // the way o
 // console.log(multiply)
 //console.log(total)
 
-//DOM MANIPULATION
+//DOM MANIPULATION => dans le fichier script.js
 
  
 
