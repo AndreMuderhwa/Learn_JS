@@ -255,7 +255,7 @@ const wordFrequency =(phrase) =>{
 //HIGHER ORDER FUNCTIONS
 //map : loops and return array
 //filter : loops and return array with matching conditions
-//reduce
+//reduce : loops and gives you back the accumulator
 
 // let result=[1,2,3,4,5,6,7].map(rs => console.log(rs))
 //MAP
@@ -292,5 +292,22 @@ const actors=[
 //playground.innerHTML=`<h1>${result[0].name}</h1>` pour l'enseignant
 // document.getElementById('conteneur').innerHTML=`<h1>${names}</h1>`  // pour l'etudiant
 
+// sum all the networth
+//SUM : Think reduce
+//reduce take in a function as an argument
+ 
+const nums=[1,2,3,4]
+const result =nums.reduce((prev, curr) => prev + curr) //addition
+const multiply=nums.reduce((prev, curr) => prev * curr) //multiplication
 
+//const totaActor=actors.map( actor => actor.networth).reduce((prev, curr) => prev + curr) //my way to resolve the question
+const total=actors.reduce((prev, curr) => prev + curr.networth,0)   // the way of teacher
+
+// console.log(result)
+// console.log(multiply)
+//console.log(total)
+
+//DOM MANIPULATION
+
+ 
 
