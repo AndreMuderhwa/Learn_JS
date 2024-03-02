@@ -40,3 +40,4 @@ const clearScores =() =>{
 let clearBtn= document.getElementById('clear-game')
 
 clearBtn.onclick = ()=> clearScores()
+//continue a 4:24:21
