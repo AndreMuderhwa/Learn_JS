@@ -15,5 +15,5 @@ let yellowDiv = document.getElementById('yellow')
 let greenDiv = document.getElementById('green')
 
 redDiv.onclick = () => console.log("red")
-
-//recommencer a 04:03:27
+yellowDiv.onclick =() => console.log('yellow')
+greenDiv.onclick =() => console.log('green')
