@@ -24,6 +24,7 @@ const increasePeople = () =>{
 
 const decreasePeople =() =>{
     if(numberOfPeople <= 1){
+       // throw 'On ne peux pas avoir un nombre de personne en dessous de 1'
         return
     }
     numberOfPeople -= 1
@@ -32,3 +33,5 @@ const decreasePeople =() =>{
     
 
 }
+
+//continue a 4:59:59
