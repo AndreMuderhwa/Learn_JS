@@ -34,4 +34,3 @@ const decreasePeople =() =>{
 
 }
 
-//continue a 4:59:59
