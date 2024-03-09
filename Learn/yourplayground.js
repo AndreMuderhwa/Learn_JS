@@ -7,22 +7,23 @@ const RandomFruit = (fruit ) =>{
  }
  
  const fruits =['banana','tomato','orange','avocado','apple']
- console.log(RandomFruit(fruits))
+//  console.log(RandomFruit(fruits))
 
  // exercice about rain, sunny overcast
  // rainny ==1 sunny ==-1 overcast == 0
 
 
- const weatherScore = (weather) =>{
+ const weatherScore = (weather, weather2) =>{
     let score 
-    if (weather =='rainy'){
-        score=1
+    if (weather =='rainy' && weather2=='overcast'){
+        score=2
     }else if(weather == 'sunny'){
         score = -1
     }else{
         score = 0
     }
+    return score
 
  }
 
- //5:18:19
+console.log(weatherScore('rainy','overcast'))
