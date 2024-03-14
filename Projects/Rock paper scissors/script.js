@@ -86,4 +86,5 @@ function endGame(totalScore){
 playGame()
 
 
-//continue at 06:13:02
+
+
