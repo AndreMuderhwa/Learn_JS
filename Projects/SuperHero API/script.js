@@ -26,7 +26,7 @@ const showHeroInfo=(character)=>{
    const stats = Object.keys(character.powerstats).map(stat =>{
         return `<p>${stat.toUpperCase()} : ${character.powerstats[stat]}</p>`
     }).join('')
-    console.log(stats.join(''))
+    //console.log(stats.join(''))
     heroImageDiv.innerHTML=`${name}${img}${stats}`
     
 }
