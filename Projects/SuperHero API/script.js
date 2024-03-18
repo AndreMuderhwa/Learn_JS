@@ -13,12 +13,26 @@ const getSuperHero =(id, name)=>{
     .then(response => response.json())
     .then(json => {
         console.log(json)
-        const name=`<h2>${json.name}</h2>`
-        const intelligence=`<p>${json.powerstats.intelligence}</p>`
-        heroImageDiv.innerHTML=`${name}<img src="${json.image.url}" height=200 width=200/>${intelligence}`
+       showHeroInfo(json)
     })
 
 }
+
+
+const showHeroInfo=(character)=>{
+    const name=`<h2>${character.name}</h2>`
+    const img=`<img src="${character.image.url}" height=200 width=200/>`
+
+   const stats = Object.keys(character.powerstats).map(stat =>{
+        return `<p>${stat.toUpperCase()} : ${character.powerstats[stat]}</p>`
+    }).join('')
+    console.log(stats.join(''))
+    heroImageDiv.innerHTML=`${name}${img}${stats}`
+    
+}
+
+
+
 const getSearchSuperHero=(name)=>{
     fetch(`${BASE_URL}/search/${name}`)
     .then(response => response.json())
@@ -26,7 +40,8 @@ const getSearchSuperHero=(name)=>{
         const hero = json.results[0]
         console.log(hero)
        // console.log(searchInput.value)
-        heroImageDiv.innerHTML=`<img src="${hero.image.url}" height=200 width=200/>`
+        // heroImageDiv.innerHTML=`<img src="${hero.image.url}" height=200 width=200/>`
+        showHeroInfo(hero)
 
     })
 }
@@ -39,3 +54,5 @@ const randomHero =()=>{
 buttonNewHero.onclick=()=>getSuperHero(randomHero())
 searchButton.onclick=()=>getSearchSuperHero(searchInput.value)
 
+//continue at 7:40:35
+ 
