@@ -54,5 +54,5 @@ const randomHero =()=>{
 buttonNewHero.onclick=()=>getSuperHero(randomHero())
 searchButton.onclick=()=>getSearchSuperHero(searchInput.value)
 
-//continue at 7:40:35
+
  
