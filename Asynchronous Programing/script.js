@@ -24,7 +24,7 @@ const promise = new Promise((resolve,reject)=>{
 
 const getPromise=async ()=>{
     try{
-        const p= await promise
+        const p= await promise               //in async function we must use try catch to get error of our promise
         console.log(p)
     }
     catch(err){
