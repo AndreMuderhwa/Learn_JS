@@ -23,16 +23,30 @@ const promise = new Promise((resolve,reject)=>{
 // )
 
 const getPromise=async ()=>{
+    data={rating:0,tip:0,pay:0,review:0}
     try{
         const p= await promise               //in async function we must use try catch to get error of our promise
         console.log(p)
+        data.rating=5
+        data.tip=4
+        data.pay=0.2
+        data.review=9
+        return data
     }
     catch(err){
         console.log(err)
+        data.tip=1
+        data.tip=
+        data.pay=0.1
+        data.review=1
+        return data
     }
 }
 
-getPromise()
+getPromise().then(value => console.log(value))
+// (async()=>{
+//     console.log(await getPromise())
+// })()
 
 // console.log(
 //     fetch('https://dog.ceo/api/breeds/image/random') //promise
