@@ -18,14 +18,44 @@ const promise = new Promise((resolve,reject)=>{
 // console.log(
 //     promise
 //     .then(success => console.log({success}))
-//     .catch(error => console.log({error}))
+//     .catch(error => console.log({error}))       // transform this code using async and await
 
 // )
 
-console.log(
-    fetch('https://dog.ceo/api/breeds/image/random') //promise
-    .then(response => response.json()) //promise
-    .then(data => console.log(data))
-    .catch(error => console.log({error:"Error for feching data"}))
+const getPromise=async ()=>{
+    try{
+        const p= await promise
+        console.log(p)
+    }
+    catch(err){
+        console.log(err)
+    }
+}
 
-)
+getPromise()
+
+// console.log(
+//     fetch('https://dog.ceo/api/breeds/image/random') //promise
+//     .then(response => response.json()) //promise
+//     .then(data => console.log(data))
+//     .catch(error => console.log({error:"Error for feching data"}))
+
+// )
+
+//USING KEYWORD ASYNC / AWAIT
+
+const getRandomDog = async()=>{
+    try{
+        const url ='https://dog.ceo/api/breeds/image/random'
+        const response = await fetch(url)
+        const data =await response.json()
+        console.log(data) 
+    }
+    catch(err){
+        console.log('Error fetching data',err)
+    }
+   
+}
+
+
+//getRandomDog()
