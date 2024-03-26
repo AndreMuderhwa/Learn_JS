@@ -31,4 +31,3 @@ const showWeatherData=(weatherData)=>{
 	document.getElementById('city-name').innerText=weatherData.name
 	document.getElementById('weather-type').innerText=weatherData.weather[0].main
 }
-//continue at 08:55:40
