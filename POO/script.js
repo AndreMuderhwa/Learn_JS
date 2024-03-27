@@ -5,9 +5,12 @@ class Car{
         this.topSpeed=topSpeed,
         this.currentSpeed=0;
     }
-    drive(){
+    getCurrentSpeed(){
+        return this.currentSpeed
+    }
+    drive(speed=30){
         //console.log("Just drove 2 miles")
-        this.currentSpeed +=10
+        this.currentSpeed +=speed
         console.log(`Driving speed at ${this.currentSpeed} mph`)
     }
     break(){
@@ -39,11 +42,21 @@ const ferrari = new Car('Ferrari','red',500)
 // ferrari.zerotoSixty()
 // console.log(ferrari.currentSpeed)
 
-const porsche = new Car('Porsche','yellow',250)
-console.log(porsche.name)
-console.log(porsche.color)
-console.log(porsche.topSpeed)
-const nums=[1,2,3,4,5]
-nums.forEach(_ => porsche.drive())
-porsche.zerotoSixty()
-porsche.stop()
+// const porsche = new Car('Porsche','yellow',250)
+// console.log(porsche.name)
+// console.log(porsche.color)
+// console.log(porsche.topSpeed)
+// const nums=[1,2,3,4,5]
+// nums.forEach(_ => porsche.drive())
+// porsche.zerotoSixty()
+// porsche.getCurrentSpeed()
+//porsche.stop()
+
+Array.prototype.mypush=function(item){
+    this[this.length]=item
+    return this
+}
+
+const fruits=['apple','banana','lemon','pineaple']
+
+console.log(fruits.mypush('Orange'))
