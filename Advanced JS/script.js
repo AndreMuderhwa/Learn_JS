@@ -11,6 +11,7 @@ document.addEventListener('keydown', function(e){
     }
     else{
         console.log('Not Q')
+        document.getElementById('victory').play()
     }
     
 })
