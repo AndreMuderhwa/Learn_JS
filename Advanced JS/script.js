@@ -7,9 +7,12 @@ const helloDiv = document.getElementById('play')
 document.addEventListener('keydown', function(e){
     if(e.key=="q"){
         console.log("You pressed Q")
+        document.getElementById('punch').play()
     }
     else{
         console.log('Not Q')
     }
     
 })
+
+//audio tags
