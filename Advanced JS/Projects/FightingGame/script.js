@@ -31,7 +31,7 @@ class Player{
         this.attackDamage=attackDamage
     }
     strike(player,enemy, attackDamage){
-        
+
 
     }
 
@@ -79,3 +79,4 @@ document.addEventListener('keydown', function(e){
 
 });
 
+//continue at 11:11:05
