@@ -33,7 +33,7 @@ class Player{
     strike(player,enemy, attackDamage){
         let damage=Math.ceil(Math.random()* attackDamage)
         enemy.health -=damage
-        updateGame(player,enemy,game.isOver)
+        updateGame(p1,p2,game.isOver)
         return `${player.name} attacks ${enemy.name} for ${damage} damage !`
 
 
@@ -54,7 +54,7 @@ class Game{
     }
 
     declareWinner(isOver,p1,p2){
-        let message;
+        let message='TIE';
         if(isOver==true && p1.health<=0){
             message=`${p2.name} WINS !`
         }
@@ -62,17 +62,29 @@ class Game{
             message=`${p1.name} WINS !`
         }
         document.getElementById('victory').play()
+        return message
 
     }
     reset(p1,p2){
+        p1.health=100
+        p2.health=100
+        this.isOver=false
+        resultDiv.innerText=''
+        updateGame(p1,p2,this.isOver)
 
     }
     play(p1,p2){
+        this.reset(p1,p2);
 
 
         while(!this.isOver){
+            p1.strike(p1,p2,p1.attackDamage)
+            p2.heal(p2)
+            p2.strike(p2,p1,p2.attackDamage)
+            p1.heal(p1)
 
         }
+        return this.declareWinner(this.isOver,p1,p2)
     }
 }
 
@@ -86,12 +98,37 @@ let game = new Game()
 updateGame(p1,p2,game.isOver)
 
 let gameState;
+playButton.onclick=()=>resultDiv.innerText=game.play(p1,p2)
 
 document.addEventListener('keydown', function(e){
+    if(e.key =='q' && p2.health >0 && game.isOver==false){
+
+        p1.strike(p1,p2,p1.attackDamage)
+        document.getElementById('p1attack').play()
+    }
+});
+
+document.addEventListener('keydown', function(e){
+    if(e.key=='a' && p2.health>0){
+        p1.heal(p1)
+        document.getElementById('p1heal').play( )
+    }
+
+});
+
+document.addEventListener('keydown', function(e){
+    if(e.key=='p' && p1.health > 0 && game.isOver==false){
+        p2.strike(p2,p1,p2.attackDamage)
+        document.getElementById('p2attack').play()
+    }
 
 });
 
 document.addEventListener('keydown', function(e){
 
-});
+    if(e.key=='l' && p1.health >0){
+        p2.heal(p2)
+        document.getElementById('p2heal').play()
+    }
 
+});
