@@ -31,11 +31,19 @@ class Player{
         this.attackDamage=attackDamage
     }
     strike(player,enemy, attackDamage){
+        let damage=Math.ceil(Math.random()* attackDamage)
+        enemy.health -=damage
+        updateGame(player,enemy,game.isOver)
+        return `${player.name} attacks ${enemy.name} for ${damage} damage !`
 
 
     }
 
     heal(player){
+        let hpAmount = Math.ceil(Math.random() * 5)
+        player.health += hpAmount
+        updateGame(player,p2,game.isOver)
+        return `${player.name} heals for ${hpAmount} !`
 
     }
 }
@@ -46,6 +54,14 @@ class Game{
     }
 
     declareWinner(isOver,p1,p2){
+        let message;
+        if(isOver==true && p1.health<=0){
+            message=`${p2.name} WINS !`
+        }
+        else if(isOver==true && p2.health<=0){
+            message=`${p1.name} WINS !`
+        }
+        document.getElementById('victory').play()
 
     }
     reset(p1,p2){
@@ -60,8 +76,8 @@ class Game{
     }
 }
 
-let player1 = new Player('Andrew',120,10)
-let player2 = new Player('Aldridge',130,10)
+let player1 = new Player('Andrew',100,10)
+let player2 = new Player('Aldridge',100,10)
 
 let p1 =player1;
 let p2 =player2;
@@ -79,4 +95,3 @@ document.addEventListener('keydown', function(e){
 
 });
 
-//continue at 11:11:05
